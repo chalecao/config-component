@@ -1,0 +1,94 @@
+{
+  "name": "config-component",
+  "version": "0.0.9",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "workspaces": [
+    "playground/*"
+  ],
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "test": "jest",
+    "build": "tsc",
+    "validate": "yarn build && yarn lint && yarn test --silent --coverage",
+    "prerelease": "yarn build",
+    "release": "dotenv lerna publish",
+    "setup": "yarn install && yarn validate",
+    "storybook": "cd ./playground/form && npm run start",
+    "storybook:build": "cd ./playground/form && npm run build-storybook",
+    "cmt": "git add . && git ci -m 'bugfix && upgrade' && git push origin master",
+    "pub": "npm version patch && npm publish",
+    "start:playground": "concurrently \"yarn build --watch\" \"yarn workspace form-playground start\""
+  },
+  "dependencies": {
+    "react-fast-compare": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.0",
+    "@types/react": "^16.8.11",
+    "@types/yup": "^0.26.12",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "codecov": "^3.3.0",
+    "concurrently": "^4.1.0",
+    "doctoc": "^1.4.0",
+    "dotenv-cli": "^2.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^1.3.1",
+    "jest": "^24.7.0",
+    "lerna": "^3.13.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hooks-testing-library": "^0.4.0",
+    "ts-jest": "^24.0.1",
+    "typescript": "^3.4.1",
+    "yup": "^0.27.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "packages/**/src/**/*.{ts,tsx}"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "README.md": [
+      "doctoc"
+    ],
+    "docs/*.md": [
+      "doctoc"
+    ],
+    "**/*.md": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "haomou.chh",
+  "license": "ISC"
+}

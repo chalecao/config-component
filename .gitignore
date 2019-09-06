@@ -1,0 +1,9 @@
+.DS_Store
+coverage
+node_modules
+node_modules/
+packages/**/lib
+storybook-static
+*.log
+.env
+src
