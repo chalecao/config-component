@@ -50,10 +50,13 @@ params:
 
 ---
 
-## example - configForm
+## online example
+playground：https://chalecao.github.io/config-component/playground/form/storybook-static/index.html
+
+### example - configForm
 online example: https://codesandbox.io/s/config-component-form-5hnvt
 
-## example - configComponent
+### example - configComponent
 online example: https://codesandbox.io/s/config-component-z7u9x
 
 ## contributor

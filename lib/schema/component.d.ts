@@ -1,35 +1,13 @@
 /**
  *
- * @param {*} uiConfig:
- * {
- *  items: [
- *    {
- *      comp: 'Input',
- *      props: {}
- *    },
- *    {
- *      comp: [
- *        {
- *          comp: 'Button',
- *          txt:  '提交‘
- *          props: {type:'primary'}
- *        },
- *        {
- *          comp: 'Button',
- *          txt:  '提交‘
- *          props: {type:'primary'}
- *        }
- *      ],
- *      props: {}
- *    }
- *  ],
- *
- * }
+ * @param {*} uiConfig: ui config in JSON schema
+ * @param {*} initialValues: init value
+ * @param {*} schema: the core schema rule to verify you data
+ * @param {*} componentSet: self define component set
  */
-export default function ConfigComponent({ uiConfig, initialValues, schema, onSubmit, componentSet }: {
+export default function ConfigComponent({ uiConfig, initialValues, schema, componentSet }: {
     uiConfig: any;
     initialValues: any;
     schema: any;
-    onSubmit: any;
     componentSet?: {} | undefined;
 }): any;
