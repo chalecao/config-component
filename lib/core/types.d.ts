@@ -28,6 +28,7 @@ export interface FormalState<Schema> {
     isValidating: boolean;
     isSubmitting: boolean;
     isSubmitted: boolean;
+    schema: YupSchema<Schema>;
     values: Schema;
     errors: FormalErrors<Schema>;
     change: (field: keyof Schema, value: any) => void;
