@@ -5,6 +5,7 @@ export interface FormalWebFormProps {
 export interface FormalWebTextFieldEvent {
     target: {
         value: string;
+        checked: boolean;
     };
 }
 export interface FormalWebFieldProps {

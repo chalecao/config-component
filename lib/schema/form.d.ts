@@ -32,7 +32,7 @@
  *
  * }
  */
-export default function ConfigForm({ uiConfig, initialValues, schema, onSubmit, componentSet }: {
+export default function ConfigForm({ uiConfig: any, initialValues: any, schema: any, onSubmit: any, componentSet }: {
     uiConfig: any;
     initialValues: any;
     schema: any;

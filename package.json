@@ -4,6 +4,11 @@
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "keywords": [
+    "schema config form",
+    "schema config component",
+    "javascript"
+  ],
   "workspaces": [
     "playground/*"
   ],
