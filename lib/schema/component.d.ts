@@ -10,4 +10,4 @@ export default function ConfigComponent({ uiConfig, initialValues, schema, compo
     initialValues: any;
     schema: any;
     componentSet?: {} | undefined;
-}): any
+}): any;

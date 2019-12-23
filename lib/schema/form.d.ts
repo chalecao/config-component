@@ -38,4 +38,4 @@ export default function ConfigForm({ uiConfig, initialValues, schema, onSubmit, 
     schema: any;
     onSubmit: any;
     componentSet?: {} | undefined;
-}): JSX.Element
+}): JSX.Element;

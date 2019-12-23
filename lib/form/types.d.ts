@@ -1,5 +1,4 @@
-import { FormalState, FormalFieldProps, FormalResetButtonProps, FormalSubmitButtonProps } from '../core/formal'
-
+import { FormalState, FormalFieldProps, FormalResetButtonProps, FormalSubmitButtonProps } from '../core/formal';
 export interface FormalWebFormProps {
     onSubmit: (e: any) => void;
 }

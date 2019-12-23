@@ -24,7 +24,7 @@
     "storybook:build": "cd ./playground/form && npm run build-storybook",
     "cmt": "git add . && git ci -m 'bugfix && upgrade' && git push origin master",
     "pub": "npm version patch && npm publish",
-    "pubt": "git acm 'test' --no-verify  && npm version patch && tnpm publish",
+    "pubt": "tsc && git acm 'test' --no-verify  && npm version patch && tnpm publish",
     "start:playground": "concurrently \"yarn build --watch\" \"yarn workspace form-playground start\""
   },
   "dependencies": {

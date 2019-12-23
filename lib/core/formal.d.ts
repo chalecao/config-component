@@ -1,2 +1,2 @@
-export { default } from './use-formal'
-export * from './types'
+export { default } from './use-formal';
+export * from './types';

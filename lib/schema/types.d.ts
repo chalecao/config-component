@@ -1,5 +1,4 @@
-import { FormalState } from '../core/types'
-
+import { FormalState } from '../core/types';
 export interface ConfigItem<Schema> {
     type: string;
     schemaKey: keyof Schema;
