@@ -1,3 +1,5 @@
+/// <reference types="react" />
+import { ComponentConfig } from './types'
 /**
  *
  * @param {*} uiConfig: ui config in JSON schema
@@ -5,9 +7,4 @@
  * @param {*} schema: the core schema rule to verify you data
  * @param {*} componentSet: self define component set
  */
-export default function ConfigComponent({ uiConfig, initialValues, schema, componentSet }: {
-    uiConfig: any;
-    initialValues: any;
-    schema: any;
-    componentSet?: {} | undefined;
-}): any;
+export default function ConfigComponent<Schema>(props: ComponentConfig<Schema>): JSX.Element[]

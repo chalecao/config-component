@@ -31,6 +31,7 @@ module.exports = {
 
     // Import.
     'import/prefer-default-export': 'off',
+    'import/extensions': 'off',
 
     // TypeScript.
     '@typescript-eslint/no-unused-vars': 'error',

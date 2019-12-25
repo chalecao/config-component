@@ -1,4 +1,7 @@
-import { FormalState } from '../core/types';
+import { Schema as YupSchema } from 'yup'
+import { FormalState } from '../core/types'
+import { FormalWebState } from '../form/types'
+
 export interface ConfigItem<Schema> {
     type: string;
     schemaKey: keyof Schema;
@@ -9,7 +12,7 @@ export interface ConfigItem<Schema> {
     tipsStyle: Schema;
     layout: Schema;
     props: Schema;
-    formal: FormalState<Schema>;
+    formal: FormalWebState<Schema>;
 }
 export interface FormConfig<Schema> {
     label: string;
@@ -19,4 +22,23 @@ export interface FormConfig<Schema> {
     layout: Schema;
     props: ConfigItem<Schema>;
     formal: FormalState<Schema>;
+}
+export interface FieldProps {
+    error?: string;
+    value?: string;
+}
+export interface UIConfig<Schema> {
+    layout: Record<string, any>;
+    tipsStyle: Schema;
+    items: ConfigItem<Schema>[];
+}
+export interface ComponentSet {
+    Form: any;
+}
+export interface ComponentConfig<Schema> {
+    uiConfig: UIConfig<Schema>;
+    initialValues: Schema;
+    schema: YupSchema<Schema>;
+    onSubmit: (values: Record<string, any>) => boolean;
+    componentSet: ComponentSet;
 }

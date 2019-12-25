@@ -13,7 +13,7 @@
     "playground/*"
   ],
   "scripts": {
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx --fix",
     "test": "jest",
     "build": "tsc",
     "validate": "yarn build && yarn lint && yarn test --silent --coverage",
@@ -28,7 +28,9 @@
     "start:playground": "concurrently \"yarn build --watch\" \"yarn workspace form-playground start\""
   },
   "dependencies": {
-    "react-fast-compare": "^2.0.4"
+    "react": "^16.8.6",
+    "react-fast-compare": "^2.0.4",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -55,12 +57,10 @@
     "lerna": "^3.13.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
-    "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hooks-testing-library": "^0.4.0",
     "ts-jest": "^24.0.1",
-    "typescript": "^3.4.1",
-    "yup": "^0.27.0"
+    "typescript": "^3.4.1"
   },
   "jest": {
     "transform": {

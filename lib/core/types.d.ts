@@ -1,7 +1,8 @@
-import { Schema as YupSchema } from 'yup';
+import { Schema as YupSchema } from 'yup'
+
 export interface FormalConfig<Schema> {
     schema?: YupSchema<Schema>;
-    onSubmit: (values: Schema) => boolean;
+    onSubmit?: (values: Schema) => boolean;
 }
 export declare type FormalErrors<Schema> = {
     [K in keyof Schema]?: Schema[K] extends object ? FormalErrors<Schema[K]> : string;
@@ -28,7 +29,7 @@ export interface FormalState<Schema> {
     isValidating: boolean;
     isSubmitting: boolean;
     isSubmitted: boolean;
-    schema: YupSchema<Schema>;
+    schema?: YupSchema<Schema>;
     values: Schema;
     errors: FormalErrors<Schema>;
     change: (field: keyof Schema, value: any) => void;

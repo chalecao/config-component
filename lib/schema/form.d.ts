@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import { ComponentConfig } from './types'
 /**
  *
  * @param {*} uiConfig:
@@ -32,10 +33,4 @@
  *
  * }
  */
-export default function ConfigForm({ uiConfig, initialValues, schema, onSubmit, componentSet }: {
-    uiConfig: any;
-    initialValues: any;
-    schema: any;
-    onSubmit: any;
-    componentSet?: {} | undefined;
-}): JSX.Element;
+export default function ConfigForm<Schema>(props: ComponentConfig<Schema>): JSX.Element
