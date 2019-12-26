@@ -13,7 +13,7 @@ export default function useFormalWeb<Schema>(
     () => ({
       onSubmit: (e: any) => {
         e.preventDefault()
-        formal.submit()
+        return formal.submit()
       },
     }),
     [formal]

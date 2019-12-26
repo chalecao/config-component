@@ -28,6 +28,7 @@ module.exports = {
     'no-new': 'off',
     'no-console': 'off',
     'no-prototype-builtins': 0,
+    'consistent-return': 0,
 
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
@@ -42,7 +43,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-object-literal-type-assertion':0,
+    '@typescript-eslint/no-object-literal-type-assertion': 0,
 
     // React/JSX
     // 'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],

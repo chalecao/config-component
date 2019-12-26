@@ -55,7 +55,7 @@ export default function useFormal<Schema>(
     if (val) {
       checkValues = { ...values, ...val }
     }
-    new Promise(async (resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       const isAsync = schemaHasAsyncValidation<Schema>(schema, checkValues)
 
       try {
@@ -86,7 +86,7 @@ export default function useFormal<Schema>(
         await validate({})
       } catch (error) {
         console.log('submit validate error:', error)
-        return
+        return error
       }
     }
 
