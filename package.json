@@ -22,7 +22,7 @@
     "setup": "yarn install && yarn validate",
     "storybook": "cd ./playground/form && npm run start",
     "storybook:build": "cd ./playground/form && npm run build-storybook",
-    "cmt": "git acm 'test' && git push origin master",
+    "cmt": "tsc && git acm 'test' && git push origin master",
     "pub": "npm version patch && npm publish",
     "pubt": "git acm 'test' --no-verify  && npm version patch && tnpm publish",
     "start:playground": "concurrently \"yarn build --watch\" \"yarn workspace form-playground start\""
