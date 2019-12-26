@@ -5,5 +5,4 @@ node_modules/
 packages/**/lib
 *.log
 .env
-src
 yarn.lock
