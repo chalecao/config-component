@@ -25,6 +25,10 @@ module.exports = {
     'no-console': 'warn',
     'no-unused-vars': 'off',
     'no-use-before-define': 'off',
+    'no-new': 'off',
+    'no-console': 'off',
+    'no-prototype-builtins': 0,
+
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
     'spaced-comment': 'off',
@@ -36,6 +40,9 @@ module.exports = {
     // TypeScript.
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/explicit-function-return-type': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-object-literal-type-assertion':0,
 
     // React/JSX
     // 'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
@@ -43,5 +50,8 @@ module.exports = {
     'react/prop-types': 'off',
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
+    'react/destructuring-assignment': 0,
+    'react/no-array-index-key': 0
+
   }
 }

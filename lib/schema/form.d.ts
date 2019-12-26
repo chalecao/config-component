@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ComponentConfig } from './types'
+import { ComponentConfig } from './types';
 /**
  *
  * @param {*} uiConfig:
@@ -33,4 +33,4 @@ import { ComponentConfig } from './types'
  *
  * }
  */
-export default function ConfigForm<Schema>(props: ComponentConfig<Schema>): JSX.Element
+export default function ConfigForm<Schema>(props: ComponentConfig<Schema>): JSX.Element;

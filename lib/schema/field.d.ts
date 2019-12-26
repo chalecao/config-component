@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ConfigItem } from './types'
+import { ConfigItem } from './types';
 /**
  * 构建每个field
  * @param param field参数和配置

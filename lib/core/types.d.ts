@@ -1,5 +1,4 @@
-import { Schema as YupSchema } from 'yup'
-
+import { Schema as YupSchema } from 'yup';
 export interface FormalConfig<Schema> {
     schema?: YupSchema<Schema>;
     onSubmit?: (values: Schema) => boolean;

@@ -1,7 +1,6 @@
-import { Schema as YupSchema } from 'yup'
-import { FormalState } from '../core/types'
-import { FormalWebState } from '../form/types'
-
+import { Schema as YupSchema } from 'yup';
+import { FormalState } from '../core/types';
+import { FormalWebState } from '../form/types';
 export interface ConfigItem<Schema> {
     type: string;
     schemaKey: keyof Schema;
