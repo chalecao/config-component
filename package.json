@@ -13,7 +13,7 @@
     "playground/*"
   ],
   "scripts": {
-    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx --fix",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx ",
     "test": "jest",
     "build": "tsc",
     "validate": "yarn build && yarn lint && yarn test --silent --coverage",
