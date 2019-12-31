@@ -111,7 +111,7 @@ function getComp<Schema>(comp: any, components: any, _ctlProps: any, _props: any
     }
     if (Object.prototype.toString.call(props.children).match('Function')) {
       return <>
-        <COMP {...ctlProps} {...props.props} >{props.children() || ''}</COMP>
+        <COMP {...ctlProps} {...props.props} >{props.children(formal) || ''}</COMP>
         {errorInfo && <div style={props.props.tipsStyle || TipsStyleDefault}>{errorInfo}</div>}
       </>
     }

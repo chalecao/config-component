@@ -55,6 +55,7 @@ export default function useFormal<Schema>(
     if (val) {
       checkValues = { ...values, ...val }
     }
+    //这里需要return，这样下面校验的时候用await才能拿到异常信息
     return new Promise(async (resolve, reject) => {
       const isAsync = schemaHasAsyncValidation<Schema>(schema, checkValues)
 
