@@ -35,7 +35,7 @@ export interface FormalState<Schema> {
     setErrors: (errors: FormalErrors<Schema>) => void;
     clearErrors: () => void;
     validate: (val: Schema) => void;
-    reset: () => void;
+    reset: (key?: [keyof Schema]) => void;
     submit: () => void;
     getFieldProps: (field: keyof Schema) => FormalFieldProps;
     getResetButtonProps: () => FormalResetButtonProps;

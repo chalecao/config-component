@@ -2,7 +2,7 @@ import React from 'react'
 import { BUTTON_TYPE_SUBMIT, BUTTON_TYPE_RESET, DefaultItem, HasValueHtmlTag, TipsStyleDefault } from '../common/constant'
 import HtmlTag from './html'
 import { FormalState } from '../core/types'
-import { ConfigItem, FieldProps } from './types'
+import { ConfigItem, FieldProps, FormalWebTextFieldEvent } from './types'
 /**
  * { 
  *      type: 'submit',
@@ -117,6 +117,13 @@ function getComp<Schema>(comp: any, components: any, _ctlProps: any, _props: any
     }
     if (Array.isArray(props.children)) {
       const { children, ...otherProps } = props
+      if (ctlProps.onChange && props.props.onChange) {
+        const tempfunc = props.props.onChange
+        props.props.onChange = (_formal: any, e: FormalWebTextFieldEvent) => {
+          ctlProps.onChange && ctlProps.onChange(e)
+          tempfunc && tempfunc(_formal, e)
+        }
+      }
       return <>
         <COMP {...ctlProps} {...props.props} >{getComp(children, components, ctlProps, otherProps) || ''}</COMP>
         {errorInfo && <div style={props.props.tipsStyle || TipsStyleDefault}>{errorInfo}</div>}
@@ -161,6 +168,13 @@ export function Field<Schema>(props: ConfigItem<Schema>) {
     'Item': DefaultItem,
   }
   const ctlProps = getCtlProps(props.formal, props)
+  if (ctlProps.onChange && props.props.onChange) {
+    const tempfunc = props.props.onChange
+    props.props.onChange = (formal: any, e: FormalWebTextFieldEvent) => {
+      ctlProps.onChange && ctlProps.onChange(e)
+      tempfunc && tempfunc(formal, e)
+    }
+  }
   return (
     <Form.Item label={props.label} {...props.layout} >
       {getComp(props.comp, props.components, ctlProps, props)}

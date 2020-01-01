@@ -76,10 +76,18 @@ export default function useFormal<Schema>(
     })
   }, [schema, values, clearErrors, setErrors])
 
-  const reset = useCallback(() => {
-    setValues(lastValues)
+  const reset = useCallback((key?: [keyof Schema]) => {
+    if (key) {
+      const _values = { ...values }
+      key.forEach(kk => {
+        _values[kk] = lastValues[kk]
+      })
+      setValues(_values)
+    } else {
+      setValues(lastValues)
+    }
     clearErrors()
-  }, [clearErrors, lastValues])
+  }, [clearErrors, values, lastValues])
 
   const submit = useCallback(async () => {
     if (schema) {

@@ -11,7 +11,9 @@ export interface ConfigItem<Schema> {
   alt: string,
   tipsStyle: Schema,
   layout: Schema,
-  props: Schema,
+  props: {
+    onChange?: Function
+  },
   formal: FormalWebState<Schema>
 }
 export interface FormConfig<Schema> {
@@ -26,7 +28,8 @@ export interface FormConfig<Schema> {
 
 export interface FieldProps {
   error?: string,
-  value?: string
+  value?: string,
+  onChange?: Function
 }
 
 export interface UIConfig<Schema> {
@@ -45,4 +48,10 @@ export interface ComponentConfig<Schema> {
   schema: YupSchema<Schema>,
   onSubmit: (values: Record<string, any>) => boolean,
   componentSet: ComponentSet,
+}
+export interface FormalWebTextFieldEvent {
+  target: {
+    value: string,
+    checked: boolean
+  }
 }
