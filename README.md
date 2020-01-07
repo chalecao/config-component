@@ -1,8 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
-
 - [config-component](#config-component)
   - [creative feature](#creative-feature)
 - [usage](#usage)
@@ -85,4 +83,4 @@ online example: https://codesandbox.io/s/config-component-z7u9x
 
 ## contributor
 
-皓眸
+haomou
