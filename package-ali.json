@@ -1,17 +1,11 @@
 {
-  "name": "config-component",
+  "name": "@ali/config-component",
   "version": "0.0.30",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "keywords": [
-    "schema config form",
-    "schema config component",
-    "javascript"
-  ],
-  "workspaces": [
-    "playground/*"
-  ],
+  "keywords": ["schema config form", "schema config component", "javascript"],
+  "workspaces": ["playground/*"],
   "scripts": {
     "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx ",
     "test": "jest",
@@ -66,9 +60,7 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "collectCoverageFrom": [
-      "packages/**/src/**/*.{ts,tsx}"
-    ]
+    "collectCoverageFrom": ["packages/**/src/**/*.{ts,tsx}"]
   },
   "husky": {
     "hooks": {
@@ -76,25 +68,15 @@
     }
   },
   "lint-staged": {
-    "README.md": [
-      "doctoc"
-    ],
-    "docs/*.md": [
-      "doctoc"
-    ],
-    "**/*.md": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "README.md": ["doctoc"],
+    "docs/*.md": ["doctoc"],
+    "**/*.md": ["prettier --write", "git add"],
+    "*.{js,jsx,ts,tsx}": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "author": "haomou.chh",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npm.alibaba-inc.com"
+  }
 }

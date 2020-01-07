@@ -1,4 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
+
+- [config-component](#config-component)
+  - [creative feature](#creative-feature)
+- [usage](#usage)
+- [online example](#online-example)
+  - [example - configForm](#example---configform)
+  - [example - configComponent](#example---configcomponent)
+- [contributor](#contributor)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## config-component
+
 ConfigComponent, write your page with JSON config.
 
 ### creative feature
@@ -10,9 +26,11 @@ ConfigComponent, write your page with JSON config.
 > ✅ support get data async, verify data when it changes.
 
 ## usage
+
 ```
 npm install config-component --save
 ```
+
 For common component:
 
 ```javascript
@@ -24,6 +42,7 @@ import {ConfigComponent} from 'config-component'
       uiConfig={...}
       />
 ```
+
 For form component:
 
 ```javascript
@@ -37,7 +56,9 @@ import {ConfigForm} from 'config-component'
       componentSet={...}
       />
 ```
+
 params:
+
 > ℹ️schema: the core data you care, ConfigComponent will verify you core data with schema，you can specify alt props in item, when error occurs, will show alt as default value
 
 > ℹ️initialValues: init value in you comp
@@ -51,13 +72,17 @@ params:
 ---
 
 ## online example
+
 playground：https://chalecao.github.io/config-component/playground/form/storybook-static/index.html
 
 ### example - configForm
+
 online example: https://codesandbox.io/s/config-component-form-5hnvt
 
 ### example - configComponent
+
 online example: https://codesandbox.io/s/config-component-z7u9x
 
 ## contributor
-waiting for you...
+
+皓眸
