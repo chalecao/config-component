@@ -162,13 +162,13 @@ function getCtlProps<Schema>(formal: FormalState<Schema>, item: ConfigItem<Schem
  * 构建每个field
  * @param param field参数和配置
  */
-export function Field<Schema>(props: ConfigItem<Schema>) {
-
+export function Field<Schema>(prop: ConfigItem<Schema>) {
+  const props = prop
   const Form = props.components.Form || {
     'Item': DefaultItem,
   }
   const ctlProps = getCtlProps(props.formal, props)
-  if (ctlProps.onChange && props.props.onChange) {
+  if (props.props && ctlProps.onChange && props.props.onChange) {
     const tempfunc = props.props.onChange
     props.props.onChange = (formal: any, e: FormalWebTextFieldEvent) => {
       ctlProps.onChange && ctlProps.onChange(e)

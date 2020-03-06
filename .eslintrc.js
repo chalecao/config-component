@@ -37,6 +37,7 @@ module.exports = {
     // Import.
     'import/prefer-default-export': 'off',
     'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 0,
 
     // TypeScript.
     '@typescript-eslint/no-unused-vars': 'error',
@@ -44,6 +45,8 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-object-literal-type-assertion': 0,
+    'no-unused-expressions': 0,
+    '@typescript-eslint/no-var-requires': 0,
 
     // React/JSX
     // 'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],

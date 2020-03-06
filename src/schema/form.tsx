@@ -44,7 +44,7 @@ export default function ConfigForm<Schema>(props: ComponentConfig<Schema>) {
     onSubmit,
   })
 
-  const Form = (componentSet && componentSet.Form) || DefaultForm
+  const Form = DefaultForm
   return (
     <Form {...formal.getFormProps()} {...uiConfig.layout}>
       {

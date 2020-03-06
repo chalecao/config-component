@@ -5,4 +5,4 @@ packages/**/lib
 storybook-static
 rn-renderer
 lib
-playground
+public

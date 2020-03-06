@@ -78,11 +78,11 @@ export default function useFormal<Schema>(
 
   const reset = useCallback((key?: [keyof Schema]) => {
     if (key) {
-      const _values = { ...values }
+      const valuesTmp = { ...values }
       key.forEach(kk => {
-        _values[kk] = lastValues[kk]
+        valuesTmp[kk] = lastValues[kk]
       })
-      setValues(_values)
+      setValues(valuesTmp)
     } else {
       setValues(lastValues)
     }
@@ -90,6 +90,7 @@ export default function useFormal<Schema>(
   }, [clearErrors, values, lastValues])
 
   const submit = useCallback(async () => {
+    console.log('submit')
     if (schema) {
       try {
         await validate({})

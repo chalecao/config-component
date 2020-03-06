@@ -9,30 +9,22 @@
     "schema config component",
     "javascript"
   ],
-  "workspaces": [
-    "playground/*"
-  ],
   "scripts": {
     "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx ",
     "test": "jest",
     "build": "tsc",
-    "validate": "yarn build && yarn lint && yarn test --silent --coverage",
-    "prerelease": "yarn build",
-    "release": "dotenv lerna publish",
-    "setup": "yarn install && yarn validate",
-    "storybook": "cd ./playground/form && npm run start",
-    "storybook:build": "cd ./playground/form && npm run build-storybook",
+    "dev": "ice-scripts dev",
     "cmt": "tsc && git acm 'test' --no-verify && git push origin master",
     "pub": "npm version patch && npm publish",
     "pubt": "npm version patch && tnpm publish",
     "start:playground": "concurrently \"yarn build --watch\" \"yarn workspace form-playground start\""
   },
   "dependencies": {
-    "react": "^16.8.6",
     "react-fast-compare": "^2.0.4",
     "yup": "^0.27.0"
   },
   "devDependencies": {
+    "@alifd/next": "^1.19.16",
     "@babel/core": "^7.4.3",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.13.0",
@@ -40,6 +32,7 @@
     "@types/yup": "^0.26.12",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^2.0.0",
+    "antd": "^4.0.1",
     "codecov": "^3.3.0",
     "concurrently": "^4.1.0",
     "doctoc": "^1.4.0",
@@ -53,10 +46,12 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": "^1.3.1",
+    "ice-scripts": "^2.1.16",
     "jest": "^24.7.0",
     "lerna": "^3.13.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
+    "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hooks-testing-library": "^0.4.0",
     "ts-jest": "^24.0.1",
